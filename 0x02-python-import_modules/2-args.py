@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import sys
+if __name__ == "__main__":
+    import sys
 
 def print_arguments():
     arguments = sys.argv[1:]
