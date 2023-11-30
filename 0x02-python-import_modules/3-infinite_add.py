@@ -8,7 +8,7 @@ def infinite_add():
 
     for arg in arguments:
         result += int(arg)
-
+        
     print(result)
 
 infinite_add()
