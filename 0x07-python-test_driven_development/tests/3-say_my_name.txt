@@ -1,0 +1,34 @@
+# Test Case 1: Valid input - both first_name and last_name provided
+first_name = "John"
+last_name = "Doe"
+
+try:
+    say_my_name(first_name, last_name)
+except TypeError as e:
+    print(e)
+
+# Test Case 2: Valid input - only first_name provided, last_name is an empty string
+first_name = "Alice"
+
+try:
+    say_my_name(first_name)
+except TypeError as e:
+    print(e)
+
+# Test Case 3: Invalid input - first_name is an integer
+first_name = 123
+last_name = "Smith"
+
+try:
+    say_my_name(first_name, last_name)
+except TypeError as e:
+    print(e)
+
+# Test Case 4: Invalid input - last_name is a list
+first_name = "Jane"
+last_name = ["Doe"]
+
+try:
+    say_my_name(first_name, last_name)
+except TypeError as e:
+    print(e)
