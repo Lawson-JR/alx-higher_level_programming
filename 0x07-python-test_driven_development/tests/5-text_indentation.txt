@@ -1,0 +1,18 @@
+def run_tests():
+    test_cases = [
+        ("Hello world.", "Hello world."),
+        ("This is the first sentence. This is the second sentence.", "This is the first sentence.\n\nThis is the second sentence."),
+        ("How are you?", "How are you?"),
+        ("Please follow these steps:", "Please follow these steps:"),
+        ("This is a sentence... with ellipsis.", "This is a sentence...\n\nwith ellipsis.")
+    ]
+
+    for i, (text, expected_output) in enumerate(test_cases):
+        try:
+            output = text_indentation(text)
+            assert output == expected_output
+            print(f"Test case {i+1}: Passed")
+        except AssertionError:
+            print(f"Test case {i+1}: Failed. Expected '{expected_output}', but got '{output}'")
+
+run_tests()
