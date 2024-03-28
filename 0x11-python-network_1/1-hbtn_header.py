@@ -14,4 +14,4 @@ if __name__ == '__main__':
     # Send a request to the URL and retrieve the X-Request-Id value from the response header
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as response:
-        print(dict(response.headers).get('X-request-Id'))    
+        print(dict(response.headers).get('X-Request-Id'))    
