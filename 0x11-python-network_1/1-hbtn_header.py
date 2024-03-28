@@ -4,6 +4,7 @@
 - sends a request to the URL and displays the value
 - of the X-Request-Id variable found in the header ofthe response.
 """
+
 import sys
 import urllib.request
 
@@ -14,4 +15,4 @@ if __name__ == '__main__':
     # Send a request to the URL and retrieve the X-Request-Id value from the response header
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as response:
-        print(dict(response.headers).get('X-Request-Id'))    
+        print(dict(response.headers).get("X-Request-Id"))    
