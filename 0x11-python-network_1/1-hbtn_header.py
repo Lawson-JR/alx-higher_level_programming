@@ -8,14 +8,16 @@
 import urllib.request
 import sys
 
-# Check if a URL is provided as an argument
-if len(sys.argv) < 2:
-    print("Please provide a URL as an argument")
-    sys.exit()
 
-url = sys.argv[1]
-
-# Send a request to the URL and retrieve the X-Request-Id value from the response header
-req = urllib.request.Request(url)
-with urllib.request.urlopen(request) as response:
-    print(dict(response.headers).get('X-request-Id'))    
+if __name__ == '__main__':
+    # Check if a URL is provided as an argument
+    if len(sys.argv) < 2:
+        print("Please provide a URL as an argument")
+        sys.exit()
+    
+    url = sys.argv[1]
+    
+    # Send a request to the URL and retrieve the X-Request-Id value from the response header
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get('X-request-Id'))    
