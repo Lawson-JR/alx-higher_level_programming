@@ -18,8 +18,4 @@ url = sys.argv[1]
 # Send a request to the URL and retrieve the X-Request-Id value from the response header
 req = urllib.request.Request(url)
 with urllib.request.urlopen(request) as response:
-    x_request_id = response.headers.get('X-Request-Id')
-    if x_request_id:
-        print(dict(x_request_id))
-    else:
-        print("X-Request-Id not found in the response header")
+    print(dict(response.headers).get('X-request-Id'))    
