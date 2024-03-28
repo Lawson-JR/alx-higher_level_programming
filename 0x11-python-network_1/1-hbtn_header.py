@@ -10,11 +10,6 @@ import sys
 
 
 if __name__ == '__main__':
-    # Check if a URL is provided as an argument
-    if len(sys.argv) < 2:
-        print("Please provide a URL as an argument")
-        sys.exit()
-    
     url = sys.argv[1]
     
     # Send a request to the URL and retrieve the X-Request-Id value from the response header
