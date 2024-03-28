@@ -11,8 +11,7 @@ if __name__ == '__main__':
   
   url = 'https://alx-intranet.hbtn.io/status'
   
-  req = urlib.request.Request(url)
-  with urllib.request.urlopen(req) as response:
+  with urllib.request.urlopen(url) as response:
     body = response.read()
     print("Body response:")
     print("\t- type: {}".format(type(body)))
