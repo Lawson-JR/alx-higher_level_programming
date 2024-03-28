@@ -9,7 +9,7 @@ import sys
 import urllib.request
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     url = sys.argv[1]
     
     # Send a request to the URL and retrieve the X-Request-Id value from the response header
