@@ -1,8 +1,8 @@
 #!/usr/bin/node
-// Reads a README file
+// Read from file
 
-const flsys = require('fs');
-flsys.readFile(process.argv[2], 'utf-8',
+const filesys = require('fs');
+filesys.readFile(process.argv[2], 'utf-8',
   function (err, data) {
     if (err) {
       console.log(err);
